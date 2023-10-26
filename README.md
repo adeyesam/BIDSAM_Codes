@@ -1,5 +1,5 @@
 # BML_Codes
-This repository contains MATLAB codes of BML algorithm for training and simulation of sparse data-driven models. 
+This repository contains MATLAB codes of Bayesian ML algorithm developed by Adeyemo and Bhattacharyya (2023) for training and simulation of sparse data-driven models. 
 
 These codes will come in versions with continuos efforts to enhance user friendliness.
 
@@ -43,4 +43,5 @@ y = simulate_model_dynamic(inputs, y_initial, solnrank)
 2. The model training is done with normalized values. Hence, during simulation, the input variables are first scaled while the normalized predictions are converted back to the normal scale before reporting back. The normalization is done based on the "buffered" range of each input and output variables fed into the algorithm.
 
 
-
+## Reference
+Adeyemo S, Bhattacharyya D “Optimal Dynamic Model Selection and Bayesian Parameter Estimation for Nonlinear Systems”, Comput. Chem. Eng., (Reviewed)
