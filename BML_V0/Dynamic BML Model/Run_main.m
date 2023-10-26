@@ -108,7 +108,7 @@ ylabel('Objective fcn (AICc)')
 xlabel('Number of Basis fcns')
 
 %% Save solution workspace
-save('solution_workspace','N','AICcve','Cmat','est_sel','idOb','Lmat','mnd','mxd','umax','umin','Ntrans','Obtrnd','i_UiUj','iUY','UYindex2')
+save('solution_workspace','N','AICcve','Amat','Cmat','est_sel','idOb','Lmat','mnd','mxd','umax','umin','Ntrans','Obtrnd','i_UiUj','iUY','UYindex2')
 
 %% Post processing of indices of transformed inputs for interpretation
 slnrank = 1;                                                    % Rank of model to be interpreted

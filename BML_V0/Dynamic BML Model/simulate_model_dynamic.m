@@ -10,10 +10,14 @@ u = inputs;
 [lengthu, lengthu2] = size(u);
 N2 = N^2;
 
-% Scaling inputs 
+% Scaling inputs and initial outputs
 for i = 1:lengthu
     u(i,:) = 1+2*(u(i,:)-umin(i))/(umax(i)-umin(i));
 end
+for i=1:N
+    y_initial(i,:)=1 + 2*(y_initial(i,:)-mnd(i))/(mxd(i)-mnd(i));
+end
+
 XXQ = y_initial;
 XQ(:,1) = XXQ;
 
@@ -92,17 +96,17 @@ N=4;
         
     XXQ = XQ(:,jj+1);
 
-    for j=1:size(yy,1)
-        y(j,jj) = mnd(j) + 0.5*(yy(j,:)-1)*(mxd(j)-mnd(j));
+    for j=1:size(XQ,1)
+        y(j,jj) = mnd(j) + 0.5*(XQ(j,jj)-1)*(mxd(j)-mnd(j));
     end
 end
 
 % Model interpretation
 fprintf(['\nThe identified model is of the form \n \ny(k+1) = A*y(k) + C*Utrans(k)' ...
-    ' \n \nBelow are the model parameters and the selected basis functions \n \n']);
+    ' \n \nBelow are the model parameters and the selected basis functions in Utrans \n \n']);
 A
 C
-BasisInterpretation(lengthu,iUY,i_UiUj,Obtrnd,idOb,slnrank,true);
+BasisInterpretation(lengthu,iUY,i_UiUj,Obtrnd,idOb,sln,true);
 
 return
 
