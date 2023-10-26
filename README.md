@@ -1,18 +1,12 @@
 # BML_Codes
-This repository contains MATLAB codes of Bayesian ML algorithm developed by Adeyemo and Bhattacharyya (2023) for training and simulation of sparse data-driven models. 
+This repository contains MATLAB codes of Bayesian ML algorithm developed by Adeyemo and Bhattacharyya (2023) for identification and simulation of sparse steady state and dynamic data-driven models. 
 
 These codes will come in versions with continuos efforts to enhance user friendliness.
 
 # Sample data
 Sample steady state and dynamic data are uploaded in the folders "Sample Steady State Data" and "Sample Dynamic Data".
 In each MATLAB data file named 'dataset' are the measured output variables named as 'data' and input variables named as 'u'.
-In each of these, the rows of 'u' are the input variables while the columns are the time instants
-
-    t1  t2  ...  tn
-u1  *    *  ...  *
-u2  *    *  ...  *
-
-The measured outputs come in similar fashion.
+In each of these, the rows of 'u' are the input variables while the columns are the time instants. The measured outputs come in similar fashion.
 
 
 # BML_V0
