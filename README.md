@@ -5,7 +5,7 @@ These codes will come in versions with continuos efforts to enhance user friendl
 
 # Sample data
 Sample steady state and dynamic data are uploaded in the folders "Sample Steady State Data" and "Sample Dynamic Data".
-In each MATLAB data file named 'dataset' are the _true_ output variables named as 'data', the noisy measurements named as *ndata* and input variables named as 'u'.
+In each MATLAB data file named 'dataset' are the _true_ output variables named as 'data', the noisy measurements named as 'ndata' and input variables named as 'u'.
 In each of these, the rows of 'u' are the input variables while the columns are the time instants. 
 
 
