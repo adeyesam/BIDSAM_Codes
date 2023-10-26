@@ -9,7 +9,8 @@ In each MATLAB data file named 'dataset' are the measured output variables named
 In each of these, the rows of 'u' are the input variables while the columns are the time instants. 
 
 
-![image](https://github.com/adeyesam/BML_Codes/assets/148823677/aaf28c87-3d13-41ed-bb01-2583af4be74b)
+![image](https://github.com/adeyesam/BML_Codes/assets/148823677/6f86d9cf-3e36-49cb-b6c8-117d8b5d0f4b)
+
 
 
 
