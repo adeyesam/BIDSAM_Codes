@@ -1,5 +1,5 @@
 # BML_Codes
-Contains codes of BML algorithm for training and simulation of sparse data-driven models. 
+This repository contains MATLAB codes of BML algorithm for training and simulation of sparse data-driven models. 
 
 These codes will come in versions with continuos efforts to enhance user friendliness.
 
