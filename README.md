@@ -7,7 +7,10 @@ These codes will come in versions with continuos efforts to enhance user friendl
 Sample steady state and dynamic data are uploaded in the folders "Sample Steady State Data" and "Sample Dynamic Data".
 In each MATLAB data file named 'dataset' are the measured output variables named as 'data' and input variables named as 'u'.
 In each of these, the rows of 'u' are the input variables while the columns are the time instants. 
+
+
 ![image](https://github.com/adeyesam/BML_Codes/assets/148823677/aaf28c87-3d13-41ed-bb01-2583af4be74b)
+
 
 
 The measured outputs come in similar fashion.
