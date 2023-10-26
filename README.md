@@ -20,7 +20,7 @@ The measured outputs come in similar fashion.
 The primary file for training a model (steady state/dynamic) is the Run_main file. At this point the user may wish to specify
 1. "est_sel": indicies of available data to be used for model training. The default setting for steady state modeling is 70% randomly selected points from available data while for dynamic modeling, it is set to 1-800. This can be adjusted depending on the amount of data considered
 
-2. "Nworker": the number or workers to be employed for parallel computation in the Branch and bound algorithm. This depends on the choice of the user number of available processors on the machine used for running the codes. The default here is set to 8
+2. "Nworker": the number or workers to be employed for parallel computation in the Branch and bound algorithm. This depends on the choice of the user and the number of available processors on the machine used for running the codes. The default here is set to 8
 
 3. "Ndes": the number of desired top rank model the user desires the algorithm to return after searching by the branch and bound algorithm.
 
