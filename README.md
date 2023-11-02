@@ -47,5 +47,7 @@ y = simulate_model_dynamic(inputs, y_initial, solnrank)
 
 ## Reference
 Adeyemo S, Bhattacharyya D* “Optimal Nonlinear Dynamic Sparse Model Selection and Bayesian Parameter Estimation for Nonlinear Systems”, Comput. Chem. Eng., (Accepted)
+
+
 *Corresponging Author: Debangsu.Bhattacharyya@mail.wvu.edu (D. Bhattacharyya)
 
