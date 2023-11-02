@@ -1,4 +1,4 @@
-# BML_Codes
+# BIDSAM_Codes
 This repository contains MATLAB codes of Bayesian ML algorithm developed by Adeyemo and Bhattacharyya (2023) for identification and simulation of sparse steady state and dynamic data-driven models. 
 
 These codes will come in versions with continuos efforts to enhance user friendliness.
