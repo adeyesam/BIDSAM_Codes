@@ -17,7 +17,7 @@ In each of these, the rows of 'u' are the input variables while the columns are 
 The measured outputs come in similar fashion.
 
 
-# BML_V0
+# BIDSAM_V0
 ## Model training
 The primary file for training a model (steady state/dynamic) is the Run_main file. At this point the user may wish to specify
 1. "est_sel": indicies of available data to be used for model training. The default setting for steady state modeling is 70% randomly selected points from available data while for dynamic modeling, it is set to 1-800. This can be adjusted depending on the amount of data considered.
