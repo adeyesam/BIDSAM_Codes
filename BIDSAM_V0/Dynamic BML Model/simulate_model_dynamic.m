@@ -76,7 +76,7 @@ for jj=1:lengthu2-1
         Ntrans = 85;
         Utrans_r = Utrans_r(1:Ntrans,:);
     end
-N=4;
+
     % Model parameters for particular rank
     sln = solnrank;
     indx = find(Obtrnd(sln,:));
