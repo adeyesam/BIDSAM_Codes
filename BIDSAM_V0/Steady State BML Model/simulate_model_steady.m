@@ -60,7 +60,7 @@ end
 
 % Model interpretation
 fprintf(['\nThe identified model is of the form \n \ny = C*Utrans' ...
-    ' \n \nBelow are the model parameters and the selected basis functions in Utrans \n \n']);
+    ' \n \nBelow are the model parameters and the selected basis functions in Utrans for model ', num2str(sln), ' \n \n']);
 C
 BasisInterpretation(lengthu,i_UiUj,Obtrnd,idOb,sln,true);
 
