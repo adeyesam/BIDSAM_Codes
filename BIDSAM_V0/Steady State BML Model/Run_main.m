@@ -97,8 +97,8 @@ save('solution_workspace','N','AICcve','Cmat','est_sel','idOb','Lmat','mnd','mxd
 % slnrank = 1;                                                % Rank of model to be interpreted
 % BasisInterpretation(lengthu,i_UiUj,Obtrnd,idOb,slnrank,true);
 
-%% Simulate model 1 and display training plots
-slnrank = 1;
+%% Simulate model 2 and display training plots
+slnrank = 2;
 load('data4est.mat')
 for i=1:N 
     data_est(i,:) = mnd(i) + 0.5*(data_est(i,:)-1)*(mxd(i)-mnd(i));
@@ -110,12 +110,12 @@ y = simulate_model_steady(u_est, slnrank);
 
 for k=1:N
     figure
-    plot(y(k,:),'+','Color',"#77AC30")
+    plot(data_est(k,:),y(k,:),'+','Color',"#77AC30")
     hold on
-    plot(data_est(k,:),'o','Color',"#D95319")
+    plot(data_est(k,:),data_est(k,:),'-','Color',"#D95319")
     hold off
-    legend('BIDSAM model','Data')
+    % legend('BIDSAM model','Data')
     title(['Training plot for variable y', num2str(k)])
-    xlabel('indices')
-    ylabel(['y',num2str(k)])
+    xlabel('Data')
+    ylabel('BIDSAM Model')
 end
