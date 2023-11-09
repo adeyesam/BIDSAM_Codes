@@ -1,5 +1,6 @@
 # BIDSAM_Codes
 This repository contains MATLAB codes for a Bayesian ML algorithm developed by Adeyemo and Bhattacharyya (2023) for identification and simulation of sparse steady state and dynamic data-driven models. 
+![image](https://github.com/adeyesam/BIDSAM_Codes/assets/148823677/93254935-1b39-48ad-9ad5-c55f30be829f)
 
 These codes will come in versions with continuos efforts to enhance user friendliness.
 
@@ -29,15 +30,11 @@ The primary file for training a model (steady state/dynamic) is the Run_main fil
 4. The user may rarely need to consider changing the value of "R" in the "EstimateModel" function file. This determines the relative weighting of penalty due to model error and model complexity. For varying cases (both synthetic and real plant data) for which this algorithm has been tested, values in the range of 0.04 - 0.06 have yielded satisfactory results.
 
 ## Model simulation
-The function files "simulate_model_dynamic" and "simulate_model_steady" will facilitate the interpretation and simulation of the hierarchichally ranked models obtained from the algorithm automatically saved as "solution_workspace" in the current directory.
+The function files "simulate_model_dynamic" and "simulate_model_steady" will facilitate the interpretation and simulation of the hierarchichally ranked models obtained from the algorithm automatically saved as "solution_workspace" in the current directory. It is advisable to copy the "solution_workspace" into a seperate folder before running the algorithm for another case study as this will overwrite the previous solution initially saved in the directory. 
 
-For the steady state model, the user needs to specify the values of the input values for which prediction of the output variables are desired and the rank of the model that is desired to be tested (specified as "solnrank"). The file can give both short-term (one time instant) and long-term (multiple time instances) predictions as may be needed by the user and specified by the values of "inputs' fed in while calling the function file as follows:
+For the steady state model, the user needs to specify the values of the input values for which prediction of the output variables are desired and the rank of the model that is desired to be tested (specified as "solnrank"). The file can give both short-term (one time instant) and long-term (multiple time instances) predictions as may be needed by the user and specified by the values of "inputs' fed in. Please refer to the file "Run_simulation_steady" for further details.
 
-y = simulate_model_steady(inputs, solnrank)
-
-Simulation of the dynamic model follows similar manner except for the need to specify the initial conditions as "y_initial" while calling the function file as follows:
-
-y = simulate_model_dynamic(inputs, y_initial, solnrank)
+Simulation of the dynamic model follows similar manner except for the need to specify the initial conditions as "y_initial". Please refer to the the file "Run_simulation_dynamic"
 
 ### Important!
 1. The top rank model may not necessarily give the best fit as the criteria for ranking models seek a balance between model fitness (as measured by log likelihood function), model size and complexity (measured as a function of the number of parameters and their estimated covariance). Hence the user may need to examine a few of the top rank models to select the most suitable model based on the model accuracy and desired interpretability as reported by the chosen basis functions.
