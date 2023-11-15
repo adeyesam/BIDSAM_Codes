@@ -16,44 +16,32 @@ function UYindex = BasisInterpretation(lengthu,iUY,i_UiUj,Obtrnd,idOb,sln,flag11
     if flag11
         id_sol = find(Obtrnd(sln,:));
         idsol = idOb(id_sol);
-        fprintf('Basis function           Indices \n');
+        % fprintf('Selected basis functions \n');
         for i=1:numel(idsol)
             if idsol(i)==1
-                Const=1;
-                fprintf('Constant                     %d \n',1);
+                fprintf('1\n');
             elseif idsol(i)>Ut_i(1) && idsol(i)<=Ut_i(2)
-                ui=idsol(i)-Ut_i(1);
-                fprintf('ui                          %d \n',idsol(i)-Ut_i(1));
+                fprintf(['u', num2str(idsol(i)-Ut_i(1)), '\n'])      
             elseif idsol(i)>Ut_i(2) && idsol(i)<=Ut_i(3)
-                uiyj=iUY(idsol(i)-Ut_i(2),:);
-                fprintf('uiyj                      %d   %d \n',iUY(idsol(i)-Ut_i(2),:));
+                fprintf(['u', num2str(iUY(idsol(i)-Ut_i(2),1)), '*y', num2str(iUY(idsol(i)-Ut_i(2),2)), '\n'])    
             elseif idsol(i)>Ut_i(3) && idsol(i)<=Ut_i(4)
-                uiuj=i_UiUj(idsol(i)-Ut_i(3),:);
-                fprintf('uiuj                      %d   %d \n',i_UiUj(idsol(i)-Ut_i(3),:));
+                fprintf(['u', num2str(i_UiUj(idsol(i)-Ut_i(3),1)), '*u', num2str(i_UiUj(idsol(i)-Ut_i(3),2)), '\n'])        
             elseif idsol(i)>Ut_i(4) && idsol(i)<=Ut_i(5)
-                u_sq=idsol(i)-Ut_i(4);
-                fprintf('u_sq                        %d \n',idsol(i)-Ut_i(4));
+                fprintf(['u', num2str(idsol(i)-Ut_i(4)), '^2 \n'])    
             elseif idsol(i)>Ut_i(5) && idsol(i)<=Ut_i(6)
-                logu=idsol(i)-Ut_i(5);
-                fprintf('log(u)                      %d \n',idsol(i)-Ut_i(5));
+                fprintf(['log(u', num2str(idsol(i)-Ut_i(5)), ')\n']) 
             elseif idsol(i)>Ut_i(6) && idsol(i)<=Ut_i(7)
-                expu=idsol(i)-Ut_i(6);
-                fprintf('exp(-u)                     %d \n',idsol(i)-Ut_i(6));
+                fprintf(['exp(-u', num2str(idsol(i)-Ut_i(6)), ') \n'])     
             elseif idsol(i)>Ut_i(7) && idsol(i)<=Ut_i(8)
-                Invu=idsol(i)-Ut_i(7);
-                fprintf('Inv(u)                     %d \n',idsol(i)-Ut_i(7));
+                fprintf(['1/u', num2str(idsol(i)-Ut_i(7)), '\n'])    
             elseif idsol(i)>Ut_i(8) && idsol(i)<=Ut_i(9)
-                Invu2=idsol(i)-Ut_i(8);
-                fprintf('Inv(u^2)                     %d \n',idsol(i)-Ut_i(8));
+                fprintf(['1/u', num2str(idsol(i)-Ut_i(8)), '^2 \n'])    
             elseif idsol(i)>Ut_i(9) && idsol(i)<=Ut_i(10)
-                sqrtu=idsol(i)-Ut_i(9);
-                fprintf('sqrt(u)                     %d \n',idsol(i)-Ut_i(9));
+                fprintf(['sqrt(u', num2str(idsol(i)-Ut_i(9)), ') \n'])   
             elseif idsol(i)>Ut_i(10) && idsol(i)<=Ut_i(11)
-                Invsqrtu=idsol(i)-Ut_i(10);
-                fprintf('1/sqrt(u)                     %d \n',idsol(i)-Ut_i(10));
+                fprintf(['1/sqrt(u', num2str(idsol(i)-Ut_i(10)), ') \n'])   
             elseif idsol(i)>Ut_i(11) && idsol(i)<=Ut_i(12)
-                sigmoidu=idsol(i)-Ut_i(11);
-                fprintf('sigmoid(-u)                     %d \n',idsol(i)-Ut_i(11));
+                fprintf(['1/(1+exp(-u', num2str(idsol(i)-Ut_i(11)), ')) \n'])   
             end
         end
     end

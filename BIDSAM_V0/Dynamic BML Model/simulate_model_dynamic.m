@@ -102,11 +102,14 @@ for jj=1:lengthu2-1
 end
 
 % Model interpretation
-fprintf(['\nThe identified model is of the form \n \ny(k+1) = A*y(k) + C*Utrans(k)' ...
-    ' \n \nBelow are the model parameters and the selected basis functions in Utrans for model ', num2str(sln), '\n \n']);
+fprintf(['\nThe identified model is of the form \n \n y(k+1) = A*y(k) + C*Utrans(k) \n \n'])
+fprintf(['Selected basis functions in Utrans for model ', num2str(sln), ': \n \n']);
+BasisInterpretation(lengthu,iUY,i_UiUj,Obtrnd,idOb,sln,true);
+
+fprintf(['\n Model parameters: \n']);
 A
 C
-BasisInterpretation(lengthu,iUY,i_UiUj,Obtrnd,idOb,sln,true);
+
 
 return
 
