@@ -1,3 +1,7 @@
+%% If you use this algorithm, please cite
+% Adeyemo, S., Bhattacharyya, D., 2024. Optimal nonlinear dynamic sparse model selection and...
+% Bayesian parameter estimation for nonlinear systems. Comput. Chem. Eng. 180, 108502. https://doi.org/10.1016/j.compchemeng.2023.108502
+
 %% Load data 
 % load('data.mat');
 % load('t.mat');
