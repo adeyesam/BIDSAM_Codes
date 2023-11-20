@@ -85,7 +85,6 @@ if Ntrans>85
     nut = 85;                                                   % No. of top rank Utrnas to be considered for BnB
     Ntrans = nut;
     utrans_est = utrans_est(1:nut,:);
-    utrans_fine = utrans_fine(1:nut,:);
 else
     nut = Ntrans;
 end
