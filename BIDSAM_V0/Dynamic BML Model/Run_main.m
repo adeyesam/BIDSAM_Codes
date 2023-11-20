@@ -106,11 +106,6 @@ ndes = 10;                                                      % Number of desi
 Nworker = 8;                                                    % Number of workers
 [AICcve, Amat, Cmat, Lmat, Obtrnd] = BranchNBound(N,ndes,Ntrans,iUY,i_UiUj,UYindex2,Nworker)
 
-figure
-plot(nonzeros(Obtrnd(1,:)))
-ylabel('Objective fcn (AICc)')
-xlabel('Number of Basis fcns')
-
 %% Save solution workspace
 save('solution_workspace','N','AICcve','Amat','Cmat','est_sel','idOb','Lmat','mnd','mxd','umax','umin','Ntrans','Obtrnd','i_UiUj','iUY','UYindex2')
 
@@ -120,6 +115,12 @@ save('solution_workspace','N','AICcve','Amat','Cmat','est_sel','idOb','Lmat','mn
 
 %% Simulate model 1 and display training plots
 slnrank = 1;
+figure
+plot(nonzeros(Obtrnd(slnrank,:)))
+ylabel('Objective fcn (AICc+2Cve)')
+xlabel('Number of Basis fcns')
+title(['Trend of Objective Function for model ', num2str(k)])
+
 load('data4est.mat')
 for i=1:N 
     data_est(i,:) = mnd(i) + 0.5*(data_est(i,:)-1)*(mxd(i)-mnd(i));
