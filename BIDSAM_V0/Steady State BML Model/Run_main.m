@@ -102,7 +102,7 @@ figure
 plot(nonzeros(Obtrnd(slnrank,:)))
 ylabel('Objective fcn (AICc+2Cve)')
 xlabel('Number of Basis fcns')
-title(['Trend of Objective Function for model ', num2str(k)])
+title(['Trend of Objective Function for model ', num2str(slnrank)])
 
 load('data4est.mat')
 for i=1:N 
