@@ -20,12 +20,12 @@ lenreadpone = lenreading+1;
 %% Range of input/output variables
 umax=zeros(1,lengthu); umin=umax;
 for i=1:lengthu
-    umax(i) = max(u(i,:)) + 0.15*abs(max(u(i,:)));
-    umin(i) = min(u(i,:)) - 0.15*abs(min(u(i,:)));
+    umax(i) = max(u(i,:)) + 0.05*abs(max(u(i,:)));
+    umin(i) = min(u(i,:)) - 0.05*abs(min(u(i,:)));
 end
 for i=1:size(data,1)
-    mxd(i)=max(data(i,:)) + 0.15*abs(max(data(i,:)));
-    mnd(i)=min(data(i,:)) - 0.15*abs(min(data(i,:)));
+    mxd(i)=max(data(i,:)) + 0.05*abs(max(data(i,:)));
+    mnd(i)=min(data(i,:)) - 0.05*abs(min(data(i,:)));
 end
 
 
