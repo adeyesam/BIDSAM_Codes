@@ -1,6 +1,6 @@
 %% File for simulating model for any set of values of inputs
 % Please ensure you have the following in the same directory as this file:
-% 1) "simulate_model_steady" function file, 2) "BasisInterpretation"
+% 1) "simulate_model_dynamic" function file, 2) "BasisInterpretation"
 % function file and 3) "solution_workspace" mat file.
 
 % Step 1: declare the set of inputs (u) for which you desire to use the model
