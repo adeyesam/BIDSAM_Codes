@@ -28,7 +28,7 @@ The primary file for training a model (steady state/dynamic) is the Run_main fil
 
 3. "Ndes": the number of desired top rank models the user desires the algorithm to return after searching by the Branch and bound algorithm.
 
-4. The user may rarely need to consider changing the value of "R" in the "EstimateModel" function file. This determines the relative weighting of penalty due to model error and model complexity. For varying cases (both synthetic and real plant data) for which this algorithm has been tested, values in the range of 0.04 - 0.06 have yielded satisfactory results.
+4. The user may rarely need to consider changing the value of "sigma" in the "EstimateModel" function file. This determines the relative weighting of penalty due to model error and model complexity. For varying cases (both synthetic and real plant data) for which this algorithm has been tested, values in the range of 0.04 - 0.06 have yielded satisfactory results.
 
 ## Model simulation
 The function files "simulate_model_dynamic" and "simulate_model_steady" will facilitate the interpretation and simulation of the hierarchichally ranked models obtained from the algorithm automatically saved as "solution_workspace" in the current directory. It is advisable to copy the "solution_workspace" into a seperate folder before running the algorithm for another case study as this will overwrite the previous solution initially saved in the directory. 
