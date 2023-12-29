@@ -127,7 +127,7 @@ end
 for i=1:lengthu 
     u_est(i,:) = umin(i) + 0.5*(u_est(i,:)-1)*(umax(i)-umin(i));
 end
-y = simulate_model_dynamic(u_est, data_est(:,1), slnrank);
+y = simulate_model_dynamic(u_est(:,1:end-1), data_est(:,1), slnrank);
 
 for k=1:N
     figure
