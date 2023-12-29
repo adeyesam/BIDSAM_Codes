@@ -22,7 +22,7 @@ XXQ = y_initial;
 XQ(:,1) = XXQ;
 
 
-for jj=1:lengthu2-1
+for jj=1:lengthu2
     
     % Compute input transformations
     if lengthu>1
@@ -95,10 +95,10 @@ for jj=1:lengthu2-1
     end
         
     XXQ = XQ(:,jj+1);
+end
 
-    for j=1:size(XQ,1)
-        y(j,jj) = mnd(j) + 0.5*(XQ(j,jj)-1)*(mxd(j)-mnd(j));
-    end
+for j=1:size(XQ,1)
+    y(j,:) = mnd(j) + 0.5*(XQ(j,:)-1)*(mxd(j)-mnd(j));
 end
 
 % Model interpretation
