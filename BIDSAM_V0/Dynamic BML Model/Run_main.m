@@ -103,6 +103,9 @@ clear data_est u_est utrans_est u1 u2 u3 uu1 uu2 uu3 ut1 ut2 ut3
 %% Branch and Bound for model selection
 ndes = 10;                                                      % Number of desired hierarchically ranked models
 Nworker = 8;                                                    % Number of workers
+if Nworker > Ntrans
+    Nworker = Ntrans
+end
 [AICcve, Amat, Cmat, Lmat, Obtrnd] = BranchNBound(N,ndes,Ntrans,iUY,i_UiUj,UYindex2,Nworker)
 
 %% Save solution workspace
