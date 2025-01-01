@@ -31,6 +31,8 @@ for jj=1:lengthu2
         for i = 1:size(i_UiUj,1)
                 UiUj(i,:) = u(i_UiUj(i,1),jj) .* u(i_UiUj(i,2),jj);
         end
+    else
+        i_UiUj = [];
     end
     n_uy = max(N,lengthu);
     
