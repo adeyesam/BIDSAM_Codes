@@ -18,11 +18,16 @@ end
 for jj=1:lengthu2
     
     % Compute input transformations
-    i_UiUj = nchoosek(1:lengthu,2);                     % Indices for Mixed second order inputs
-    UiUj = zeros(size(i_UiUj,1),1);
-    for i = 1:size(i_UiUj,1)
-            UiUj(i,:) = u(i_UiUj(i,1),jj) .* u(i_UiUj(i,2),jj);
+    if lengthu>1
+        i_UiUj = nchoosek(1:lengthu,2);                     % Indices for Mixed second order inputs
+        UiUj = zeros(size(i_UiUj,1),lengthu2);
+        for i = 1:size(i_UiUj,1)
+                UiUj(i,:) = uu(i_UiUj(i,1),:) .* uu(i_UiUj(i,2),:);
+        end
+    else
+        i_UiUj = [];
     end
+    
     U2 = u(:,jj) .* u(:,jj);
     LogU = log(u(:,jj));                                % Natural log transformation
     ExpU = exp(-u(:,jj));                               % Exponential transformation
